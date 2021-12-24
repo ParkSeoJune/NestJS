@@ -43,7 +43,7 @@ export class MoviesController {
 
   @Post() // 데이터를 받을때는 Body를 쓴다
   create(@Body() movieData: CreateMovieDto) {
-    return this.moviesService.create(movieData);
+    return this.moviesService.create(movieData); // git login을 하자!
   }
 
   @Delete('/:id')
