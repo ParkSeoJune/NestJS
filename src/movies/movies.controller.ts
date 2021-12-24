@@ -38,7 +38,7 @@ export class MoviesController {
   @Get('/:id') // 얻으려고 하는 이름과 Param의 이름은 같아야 한다
   getOne(@Param('id') movieId: number): Movie {
     console.log(typeof movieId);
-    return this.moviesService.getOne(movieId);
+    return this.moviesService.getOne(movieId); // 이야 -
   }
 
   @Post() // 데이터를 받을때는 Body를 쓴다
