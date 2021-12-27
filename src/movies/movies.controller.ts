@@ -38,12 +38,12 @@ export class MoviesController {
   @Get('/:id') // 얻으려고 하는 이름과 Param의 이름은 같아야 한다
   getOne(@Param('id') movieId: number): Movie {
     console.log(typeof movieId);
-    return this.moviesService.getOne(movieId); // 이야 - 멋있다
+    return this.moviesService.getOne(movieId);
   }
 
   @Post() // 데이터를 받을때는 Body를 쓴다
   create(@Body() movieData: CreateMovieDto) {
-    return this.moviesService.create(movieData); // git login을 하자!
+    return this.moviesService.create(movieData);
   }
 
   @Delete('/:id')
